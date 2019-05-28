@@ -19,36 +19,8 @@
     <text class="cuIcon-title text-blue"></text> 绩效日历
   </view>
 </view>
-<!-- 日历年月 -->
-<view class='calendar_title flex_nowrap'>
-  <view class='icon' bindtap='lastMonth'>
 
-  </view>
-  <view>{{year}}年{{month}}月</view>
-  <view class='icon' bindtap='nextMonth'>
-
-  </view>
-</view>
-
-<!-- 日历主体 -->
-<view class='calendar'>
-  <view class='header'>
-    <view wx:for='{{date}}' wx:key='' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}
-      <view></view>
-    </view>
-  </view>
-
-  <view class='date-box'>
-    <block wx:for='{{dateArr}}' wx:key=''>
-      <view class='{{isToday == item.isToday ? "nowDay" : ""}}'>
-        <view class='date-head' bindtap='lookHuoDong' data-year='{{year}}' data-month='{{month}}' data-datenum='{{item.dateNum}}'>
-          <view>{{item.dateNum}}</view>
-        </view>
-      </view>
-    </block>
-  </view>
-
-</view>
+<calendar calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="true" />
 
   <view class='cu-tabbar-height'></view>
 </scroll-view>
