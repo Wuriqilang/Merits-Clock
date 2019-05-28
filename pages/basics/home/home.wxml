@@ -1,0 +1,46 @@
+<!-- <scroll-view scroll-y class="scrollPage"> -->
+<scroll-view scroll-y class="">
+
+  <view class="cu-list grid no-border col-4 bg-gradual-blue radius margin-top margin-left margin-right margin-bottom">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key>
+      <view class="cuIcon-{{item.icon}} text-{{item.color}}" style='font-size:25px;'>
+        <view class="cu-tag badge">
+          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
+        </view>
+      </view>
+      <view class="text-white">{{item.name}}</view>
+    </view>
+  </view>
+
+
+
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text> 绩效日历
+  </view>
+</view>
+
+<calendar calendar="{{calendar}}" gesture="{{gesture}}"></calendar>
+
+  <view class='nav-list margin-top'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/basics/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text> 系统管理
+  </view>
+</view>
+  <view class='nav-list margin-top'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/basics/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{elements2}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
