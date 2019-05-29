@@ -46,7 +46,7 @@ App({
   globalData: {
     userInfo: null,
 		user:null,
-		BaseURL: "http://localhost:3000/"
+    BaseURL: "http://localhost:3000/"
     // BaseURL:"http://192.168.0.107:8080"
   }
 })

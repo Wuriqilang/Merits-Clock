@@ -1,3 +1,6 @@
+//获取应用实例
+const app = getApp();
+
 Component({
   options: {
     addGlobalClass: true,
@@ -34,8 +37,7 @@ Component({
 		let that = this;
 		// 获取消息信息
 		wx.request({
-			url: 'http://localhost:3000/martisClock/' + app.globalData.user.userID, //真实的接口地址
-			//url: 'http://localhost:3000/message/admin' , //真实的接口地址
+      url: app.globalData.BaseURL+'martisClock/' + app.globalData.user.userID, //真实的接口地址
 			data: {},
 			header: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			success: function (res) {
@@ -46,7 +48,8 @@ Component({
 					})
 				}
 				else {
-					console.log(res.data);
+					console.log(res.data[0].martisClockDate);
+          
 					
 
 				}

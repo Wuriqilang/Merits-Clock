@@ -62,11 +62,9 @@ Page({
 			wx.request({
 				method: 'POST',
 				url: app.globalData.BaseURL + 'propertyLogin',
-				//url:'https://rvkol.com/login',
 				data: e.detail.value,
         header: { 'content-type': 'application/x-www-form-urlencoded' },
 				success: function (res) {
-          //console.log(res);
 					if (res.data.success) {
 						//存储用户信息 用于用户登陆状态维护
 						app.globalData.user = res.data.data;

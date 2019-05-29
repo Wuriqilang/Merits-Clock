@@ -46,7 +46,7 @@ function MessageSubmit(messageFrom,messageTo,messageContext,messageType) {
 	})
 }
 
-//最下面一定要加上你自定义的方法（作用：将模块接口暴露出来），否则会报错：util.trim is not a function;
+//加上自定义的方法（作用：将模块接口暴露出来），否则会报错：util.trim is not a function;
 module.exports = {
 	DeleteMessage: DeleteMessage,
 	MessageSubmit:MessageSubmit
