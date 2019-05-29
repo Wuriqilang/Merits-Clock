@@ -29,27 +29,34 @@ Component({
       { month: 'current', day: new Date().getDate()+1, color: 'white', background: '#030' }
     ],
   },
+	//组件创建时，获取数据
+	created() {
+		let that = this;
+		// 获取消息信息
+		wx.request({
+			url: 'http://localhost:3000/martisClock/' + app.globalData.user.userID, //真实的接口地址
+			//url: 'http://localhost:3000/message/admin' , //真实的接口地址
+			data: {},
+			header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			success: function (res) {
+				//console.log(res);
+				if (res.data == 'No Session') {
+					wx.navigateTo({
+						url: '/pages/welcome/home/home',
+					})
+				}
+				else {
+					console.log(res.data);
+					
+
+				}
+			},
+			fail: function (err) {
+				console.log(err)
+			}
+		})
+	},
   methods: {
-    onLoad() {
-      let that = this;
-      // 获取用户信息
-      wx.getSetting({
-        success: res => {
-          if (!res.authSetting['scope.userInfo']) {
-            wx.redirectTo({
-              url: '/pages/auth/auth'
-            })
-          }
-        }
-      })
-    },
-    onShareAppMessage() {
-      return {
-        title: 'ColorUI-高颜值的小程序UI组件库',
-        imageUrl: 'https://image.weilanwl.com/color2.0/share2215.jpg',
-        path: '/pages/basics/home/home'
-      }
-		},
     //给点击的日期设置一个背景颜色
     // dayClick: function (event) {
     //   let clickDay = event.detail.day;
