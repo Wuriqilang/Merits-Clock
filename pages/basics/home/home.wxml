@@ -20,7 +20,7 @@
   </view>
 </view>
 
-<calendar calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="true" />
+<calendar calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" binddateChange="dateChange"  />
 
   <view class='cu-tabbar-height'></view>
 </scroll-view>

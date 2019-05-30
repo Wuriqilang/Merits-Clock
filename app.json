@@ -1,33 +1,34 @@
 {
-  "pages": [
-    "pages/welcome/home/home",
+	"pages": [
+		"pages/welcome/home/home",
 		"pages/index/index",
-    "pages/component/home/home",
-    "pages/plugin/home/home",
-    "pages/plugin/indexes/indexes",
-    "pages/plugin/gradual/gradual",
-    "pages/plugin/animation/animation",
-    "pages/auth/auth",
-    "pages/about/about/about",
-    "pages/about/log/log",
-    "pages/about/home/home",
-    "pages/plugin/drawer/drawer",
-    "pages/plugin/verticalnav/verticalnav"
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "#39b54a",
-    "navigationBarTitleText": "绩效时钟",
-    "navigationStyle": "custom",
-    "navigationBarTextStyle": "white"
-  },
-  "usingComponents": {
-    "cu-custom": "/colorui/components/cu-custom"
-  },
-  "sitemapLocation": "sitemap.json",
-  "plugins": {
-    "calendar": {
-      "version": "1.1.3",
-      "provider": "wx92c68dae5a8bb046"
-    }
-  }
+		"pages/component/home/home",
+		"pages/plugin/home/home",
+		"pages/plugin/indexes/indexes",
+		"pages/plugin/gradual/gradual",
+		"pages/plugin/animation/animation",
+		"pages/auth/auth",
+		"pages/about/about/about",
+		"pages/about/log/log",
+		"pages/about/home/home",
+		"pages/plugin/drawer/drawer",
+		"pages/plugin/verticalnav/verticalnav",
+		"pages/basics/detail/detail"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#39b54a",
+		"navigationBarTitleText": "绩效时钟",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white"
+	},
+	"usingComponents": {
+		"cu-custom": "/colorui/components/cu-custom"
+	},
+	"sitemapLocation": "sitemap.json",
+	"plugins": {
+		"calendar": {
+			"version": "1.1.3",
+			"provider": "wx92c68dae5a8bb046"
+		}
+	}
 }

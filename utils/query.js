@@ -1,4 +1,6 @@
 //删除消息;
+
+
 function DeleteMessage(s) {
 	console.log(s);
 	wx.request({
