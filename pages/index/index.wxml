@@ -16,12 +16,12 @@
   <text class="text-grey text-xl">{{motto}}</text>
 </view> -->
 
-
-
 <basics wx:if="{{PageCur=='basics'}}"></basics>
 <component wx:if="{{PageCur=='component'}}"></component>
 <plugin wx:if="{{PageCur=='plugin'}}"></plugin>
 <about wx:if="{{PageCur=='about'}}"></about>
+<add wx:if="{{PageCur=='add'}}"></add>
+
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="NavChange" data-cur="basics">
     <view class='icon-cu-image'>
@@ -33,20 +33,26 @@
     <view class='icon-cu-image'>
       <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
     </view>
+    <view class="cu-tag badge" style='right:15px;'></view>
     <view class="{{PageCur=='component'?'text-green':'text-gray'}}">我的工作</view>
   </view>
+  <view class="action text-gray add-action" bindtap="NavChange" data-cur="add">
+    <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    发布
+  </view>
 
-   <view class="action" bindtap="NavChange" data-cur="plugin">
-     <view class='icon-cu-image'>
-      <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image> 
+  <view class="action" bindtap="NavChange" data-cur="plugin">
+    <view class='icon-cu-image'>
+      <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">新建任务</view> 
-  </view> 
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">新建任务</view>
+  </view>
 
-    <view class="action" bindtap="NavChange" data-cur="about">
+  <view class="action" bindtap="NavChange" data-cur="about">
     <view class='icon-cu-image'>
       <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
     </view>
     <view class="{{PageCur=='about'?'text-green':'text-gray'}}">个人中心</view>
   </view>
+
 </view>

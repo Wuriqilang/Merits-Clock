@@ -7,7 +7,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-
+		martisClockList:[]
 	},
 
 	/**
@@ -17,7 +17,7 @@ Page({
 		//获取传入的日期数据
 		var tempDate = JSON.parse(options.dataObj);
 		var date = tempDate.year + '-' + tempDate.month + '-' + tempDate.day;
-		console.log(date);
+		var that = this;
 		wx.request({
 			url: app.globalData.BaseURL + 'martisClock/' + app.globalData.user.userID+'/'+date,
 			//真实的接口地址
@@ -33,6 +33,9 @@ Page({
 					})
 				} else {
 					console.log(res.data);
+					that.setData({
+						martisClockList:res.data
+					})
 				}
 			},
 			fail: function (err) {
