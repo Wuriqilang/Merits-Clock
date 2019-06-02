@@ -118,6 +118,7 @@ Component({
 		},
 		//下一个月
 		next: function (event) {
+      var tempData = this.data.dataList;
 			var dayData = new Array();
 			for (var i = 0; i < tempData.length; i++) {
 				if (new Date(tempData[i].martisClockDate).getMonth()+1 == event.detail.currentMonth && new Date(tempData[i].martisClockDate).getFullYear() == event.detail.currentYear) {

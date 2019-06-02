@@ -38,7 +38,7 @@
   </view>
   <view class="action text-gray add-action" bindtap="NavChange" data-cur="add">
     <button class="cu-btn cuIcon-add bg-green shadow"></button>
-    发布
+    添加工作
   </view>
 
   <view class="action" bindtap="NavChange" data-cur="plugin">
