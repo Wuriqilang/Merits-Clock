@@ -40,7 +40,7 @@ Component({
         background: '#030'
       }
     ],
-		dataList:[]
+		dataList:[],
   },
   //组件创建时，获取数据,获取当前数据
   created() {

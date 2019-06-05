@@ -11,16 +11,19 @@
       <view class="text-white">{{item.name}}</view>
     </view>
   </view>
-
-
-
-<view class="cu-bar bg-white">
-  <view class="action">
-    <text class="cuIcon-title text-blue"></text> 绩效日历
+  <view class="text-black text-sm margin-bottom">
+    <text class="cuIcon-warn text-red margin-left-lg"></text> 您有共计: {{dataList.length}}项绩效任务未完成。
   </view>
-</view>
 
-<calendar calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" binddateChange="dateChange"  />
+
+
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text> 绩效日历
+    </view>
+  </view>
+
+  <calendar calendar-style="calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" binddateChange="dateChange" />
 
   <view class='cu-tabbar-height'></view>
 </scroll-view>
