@@ -25,5 +25,11 @@
 
   <calendar calendar-style="calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" binddateChange="dateChange" />
 
+	  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text> 绩效排名
+    </view>
+  </view>
+
   <view class='cu-tabbar-height'></view>
 </scroll-view>
