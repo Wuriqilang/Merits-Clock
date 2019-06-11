@@ -1,24 +1,9 @@
-<cu-custom bgColor="bg-gradual-red">
-  <view slot="content">绩效时钟</view>
+<cu-custom bgColor="bg-gradual-green">
+  <view  slot="content">绩效时钟<text class="cuIcon-remind lg text-gray"></text></view>
 </cu-custom>
-<!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
-  </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
-</view> -->
+
 
 <basics wx:if="{{PageCur=='basics'}}"></basics>
-<component wx:if="{{PageCur=='component'}}"></component>
-<plugin wx:if="{{PageCur=='plugin'}}"></plugin>
 <about wx:if="{{PageCur=='about'}}"></about>
 <add wx:if="{{PageCur=='add'}}"></add>
 
@@ -29,24 +14,24 @@
     </view>
     <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="component">
+  <!-- <view class="action" bindtap="NavChange" data-cur="component">
     <view class='icon-cu-image'>
       <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
     </view>
     <view class="cu-tag badge" style='right:15px;'></view>
     <view class="{{PageCur=='component'?'text-green':'text-gray'}}">我的工作</view>
-  </view>
+  </view> -->
   <view class="action text-gray add-action" bindtap="NavChange" data-cur="add">
     <button class="cu-btn cuIcon-add bg-green shadow"></button>
     添加工作
   </view>
 
-  <view class="action" bindtap="NavChange" data-cur="plugin">
+  <!-- <view class="action" bindtap="NavChange" data-cur="plugin">
     <view class='icon-cu-image'>
       <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
     </view>
     <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">新建任务</view>
-  </view>
+  </view> -->
 
   <view class="action" bindtap="NavChange" data-cur="about">
     <view class='icon-cu-image'>

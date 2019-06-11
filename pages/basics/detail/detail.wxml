@@ -1,10 +1,10 @@
 <!--pages/basics/detail/detail.wxml-->
-<cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
   <view slot="backText">返回</view>
-  <view slot="content">工作信息</view>
+  <view slot="content">工作信息  {{title}}</view>
 </cu-custom>
 
-<view class="cu-bar bg-gradual-red search">
+<view class="cu-bar bg-gradual-green search">
   <view class="search-form radius">
     <text class="cuIcon-search"></text>
     <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
@@ -16,7 +16,7 @@
 </view>
 
 <view class="cu-card article isCard">
-  <view wx:for="{{martisClockList}}" wx:key class="cu-item shadow">
+  <view wx:for="{{martisClockList}}" wx:key class="cu-item shadow" >
 			    <view class="cu-capsule round margin-top margin-left">
       <view class="cu-tag bg-blue ">
         期限
@@ -38,10 +38,10 @@
             <text wx:if="{{item.martisClockComplete}}" class="cuIcon-roundcheckfill text-green margin-left-sm"></text>
           </view>
         </view>
-        <view class="text-content margin-top" style="height:auto"> 具体工作任务:{{item.martisClockDetail}}</view>
-        <view class="text-content " style="height:auto"> 已完成情况:{{item.martisAlready}}</view>
-        <view class="text-content " style="height:auto"> 未完成情况:{{item.martisPadding}}</view>
-        <view class="text-content margin-buttom" style="height:auto"> 备注:{{item.martisRemark}}</view>
+        <view class="text-content margin-top" style="height:auto"> <text class='text-bold'>具体工作任务:</text>{{item.martisClockDetail}}</view>
+        <view class="text-content " style="height:auto"> <text class='text-bold'>已完成情况:</text>{{item.martisClockAlready}}</view>
+        <view class="text-content " style="height:auto"><text class='text-bold'> 未完成情况:</text>{{item.martisClockPadding}}</view>
+        <view class="text-content margin-buttom" style="height:auto"> <text class="text-bold">备注:</text>{{item.martisClockRemark}}</view>
         <view>
           <view class="cu-tag bg-red light sm round">考评科室：{{item.martisClockDep}}</view>
           <view class="cu-tag bg-blue light sm round">责任人:{{item.martisClockUser}}</view>

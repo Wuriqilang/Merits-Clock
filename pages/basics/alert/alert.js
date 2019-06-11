@@ -1,4 +1,4 @@
-// pages/plugin/verticalnav/verticalnav.js
+// pages/basics/alert/alert.js
 Page({
 
   /**

@@ -7,7 +7,8 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		martisClockList:[]
+		martisClockList:[],
+    title:''
 	},
 
 	/**
@@ -17,6 +18,9 @@ Page({
 		//获取传入的日期数据
 		var tempDate = JSON.parse(options.dataObj);
 		var date = tempDate.year + '-' + tempDate.month + '-' + tempDate.day;
+    this.setData({
+      title:date
+    })
 		var that = this;
 		wx.request({
 			url: app.globalData.BaseURL + 'martisClock/' + app.globalData.user.userID+'/'+date,

@@ -25,12 +25,12 @@ function DeleteMessage(s) {
 }
 
 
-function MessageSubmit(messageFrom,messageTo,messageContext,messageType) {
+function MessageSubmit(messageFrom,messageTo,messageContext,messageType,messageSource) {
 	console.log(messageFrom + "," + messageTo+","+messageContext);
 	wx.request({
 		method: 'POST',
 		url: 'http://localhost:3000/messageSubmit',
-		data: { messageFrom: messageFrom,messageTo:messageTo,messageContext:messageContext,messageType:messageType },
+		data: { messageFrom: messageFrom,messageTo:messageTo,messageContext:messageContext,messageType:messageType,messageSource:messageSource },
 		header: { 'content-type': 'application/json' },
 		success: function (res) {
 			console.log(res);

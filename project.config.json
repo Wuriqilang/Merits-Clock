@@ -4,16 +4,18 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
-	"appid": "wx9d2c41a9c27b70e8",
+	"libVersion": "2.7.1",
+	"appid": "wx1dfe6034a5c83b31",
 	"projectname": "Merits%20Clock",
 	"debugOptions": {
 		"hidedInDevtools": []

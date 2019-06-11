@@ -1,18 +1,4 @@
-<!-- <view class="margin-xl padding-xl bg-white radius shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
-  </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
-</view>
- -->
+
 
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
@@ -21,7 +7,7 @@
       <text class="text-df">苏里格经济技术开发区税务局</text>
     </view>
     <view class="margin-top-sm">
-      <text class='text-red text-bold'>资产身份证</text>
+      <text class='text-white text-bold'>绩效时钟 ⏲️</text>
     </view>
     <image src="https://api.xr1228.com/static/img/wave.gif" mode="scaleToFill" class="gif-wave"></image>
   </view>

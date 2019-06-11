@@ -30,10 +30,10 @@
   padding-top: 10px;    /*上内边距为10px*/
   color: #38ACFF;
   border-radius: 15px;   /*添加边框圆角*/
-  border: 2rpx solid #38ACFF;
-  -webkit-box-shadow:0 0 10px #38ACFF;
-  -moz-box-shadow:0 0 10px #38ACFF;
-  box-shadow:0 0 10px #38ACFF;
+  border: 2rpx solid rgb(56, 255, 122);
+  -webkit-box-shadow:0 0 10px rgb(56, 255, 132);
+  -moz-box-shadow:0 0 10px rgb(56, 255, 66);
+  box-shadow:0 0 10px rgb(14, 214, 131);
 
 }
 

@@ -6,26 +6,36 @@ Component({
     addGlobalClass: true,
   },
   data: {
+    paddingCount:0,
+    alreadyCount:0,
+    alertCount:0,
     iconList: [{
       icon: 'list',
       color: 'white',
-      badge: 120,
-      name: '进行中'
+      badge: 0,
+      name: '进行中',
+      type:2,
+      url:'detail2'
     }, {
       icon: 'check',
       color: 'white',
-      badge: 1,
-      name: '已完成'
+      badge: 0,
+      name: '已完成',
+      type:1,
+      url: 'detail2'
     }, {
       icon: 'notice',
       color: 'white',
       badge: 0,
-      name: '提醒'
+      name: '提醒',
+      type:3,
+      url:'detail2'
     }, {
       icon: 'comment',
       color: 'white',
-      badge: 22,
-      name: '通知'
+      badge: 0,
+      name: '通知',
+      url:'notice'
     }, ],
     dayStyle: [{
         month: 'current',
@@ -54,13 +64,16 @@ Component({
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        //console.log(res);
+        console.log(res.data);
         if (res.data == 'No Session') {
           wx.navigateTo({
             url: '/pages/welcome/home/home',
           })
         } else {
-          var dayData = new Array()
+          var dayData = new Array();
+          var completedCount=0;
+          var paddingCount=0;
+          var alertCount=0;
           for (var i = 0; i < res.data.length; i++) {
             if (new Date(res.data[i].martisClockDate).getMonth() == new Date().getMonth()) {
               //将内容数据转换为对象
@@ -71,10 +84,26 @@ Component({
                 background: '#030'
               })
             }
+            if(res.data[i].martisClockComplete){
+              completedCount++;
+            }else{
+              paddingCount++;
+              if (res.data[i].martisClockMargin<=res.data[i].martisClockAlert){
+                alertCount++;
+              }
+            }
           }
+
+          let paddingCountBadge = `iconList[0].badge`;
+          let alreadyCountBadge = `iconList[1].badge`;
+          let alertCountBadge = `iconList[2].badge`;
+
           that.setData({
             dayStyle: dayData,
-						dataList: res.data
+						dataList: res.data,
+            [paddingCountBadge]:paddingCount,
+            [alreadyCountBadge]: completedCount,
+            [alertCountBadge]: alertCount,
           })
 
         }
