@@ -68,6 +68,7 @@ Page({
               url: '/pages/welcome/home/home',
             })
           } else {
+						console.log(res.data)
             that.setData({
               martisClockList: res.data
             })
