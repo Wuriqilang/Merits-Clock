@@ -3,7 +3,7 @@
 </cu-custom>
 
 
-<basics wx:if="{{PageCur=='basics'}}"></basics>
+<basics id="basicsComponent" wx:if="{{PageCur=='basics'}}"></basics>
 <about wx:if="{{PageCur=='about'}}"></about>
 <add wx:if="{{PageCur=='add'}}"></add>
 

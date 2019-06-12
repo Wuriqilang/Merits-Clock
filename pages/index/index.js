@@ -51,6 +51,9 @@ Page({
       })
     }
   },
+  onShow: function(){
+    this.selectComponent("#basicsComponent").refresh();
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

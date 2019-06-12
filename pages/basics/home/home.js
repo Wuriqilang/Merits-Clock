@@ -37,18 +37,7 @@ Component({
       name: '通知',
       url:'notice'
     }, ],
-    dayStyle: [{
-        month: 'current',
-        day: '7',
-        color: 'white',
-        background: '#AAD4F5'
-      },
-      {
-        month: 'current',
-        day: new Date().getDate() + 1,
-        color: 'white',
-        background: '#030'
-      }
+    dayStyle: [
     ],
 		dataList:[],
   },
@@ -81,7 +70,7 @@ Component({
                 month: 'current',
                 day: new Date(res.data[i].martisClockDate).getDate(),
                 color: 'white',
-                background: '#030'
+                background: '#DC143C'
               })
             }
             if(res.data[i].martisClockComplete){
@@ -105,7 +94,12 @@ Component({
             [alreadyCountBadge]: completedCount,
             [alertCountBadge]: alertCount,
           })
-
+          if(alertCount>0){
+            wx.showToast({
+              title: '有'+alertCount+'项任务提醒',
+              image:'/images/tabbar/about.png'
+            })
+          }
         }
       },
       fail: function(err) {
@@ -118,13 +112,6 @@ Component({
 			 wx.navigateTo({
 				 url: '/pages/basics/detail/detail?dataObj=' + JSON.stringify(event.detail),
 			 })
-    //   let clickDay = event.detail.day;
-    //   let changeDay = `dayStyle[1].day`;
-    //   let changeBg = `dayStyle[1].background`;
-    //   this.setData({
-    //     [changeDay]: clickDay,
-    //     [changeBg]: "#84e7d0"
-    //   })
      },
 		//前一个月
 		prev: function (event) {
@@ -137,7 +124,7 @@ Component({
 						month: 'current',
 						day: new Date(tempData[i].martisClockDate).getDate(),
 						color: 'white',
-						background: '#030'
+            background: '#DC143C'
 					})
 				}
 			}
@@ -156,7 +143,7 @@ Component({
 						month: 'current',
 						day: new Date(tempData[i].martisClockDate).getDate(),
 						color: 'white',
-						background: '#030'
+            background: '#DC143C'
 					})
 				}
 			}
@@ -175,13 +162,74 @@ Component({
 						month: 'current',
 						day: new Date(tempData[i].martisClockDate).getDate(),
 						color: 'white',
-						background: '#030'
+            background: '#DC143C'
 					})
 				}
 			}
 			this.setData({
 				dayStyle: dayData
 			})
-		}
+		},
+    refresh() {
+      let that = this;
+      // 获取消息信息
+      wx.request({
+        url: app.globalData.BaseURL + 'martisClock/' + app.globalData.user.userID,
+        //真实的接口地址
+        data: {},
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        success: function (res) {
+          console.log(res.data);
+          if (res.data == 'No Session') {
+            wx.navigateTo({
+              url: '/pages/welcome/home/home',
+            })
+          } else {
+            var dayData = new Array();
+            var completedCount = 0;
+            var paddingCount = 0;
+            var alertCount = 0;
+            for (var i = 0; i < res.data.length; i++) {
+              if (new Date(res.data[i].martisClockDate).getMonth() == new Date().getMonth()) {
+                //将内容数据转换为对象
+                dayData.push({
+                  month: 'current',
+                  day: new Date(res.data[i].martisClockDate).getDate(),
+                  color: 'white',
+                  background: '#DC143C'
+                })
+              }
+              if (res.data[i].martisClockComplete) {
+                completedCount++;
+              } else {
+                paddingCount++;
+                if (res.data[i].martisClockMargin <= res.data[i].martisClockAlert) {
+                  alertCount++;
+                }
+              }
+            }
+
+            let paddingCountBadge = `iconList[0].badge`;
+            let alreadyCountBadge = `iconList[1].badge`;
+            let alertCountBadge = `iconList[2].badge`;
+
+            that.setData({
+              dayStyle: dayData,
+              dataList: res.data,
+              [paddingCountBadge]: paddingCount,
+              [alreadyCountBadge]: completedCount,
+              [alertCountBadge]: alertCount,
+            })
+
+          }
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+      })
+    }
   },
+
 })
