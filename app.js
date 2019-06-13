@@ -46,7 +46,8 @@ App({
   globalData: {
     userInfo: null,
 		user:null,
-    //BaseURL: "http://localhost:3000/"
-    BaseURL:"https://api.xr1228.com/"
+    token:'',
+    BaseURL: "http://localhost:3000/"
+    //BaseURL:"https://api.xr1228.com/"
   }
 })

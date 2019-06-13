@@ -61,13 +61,16 @@ Page({
 		} else {
 			wx.request({
 				method: 'POST',
-				url: app.globalData.BaseURL + 'propertyLogin',
+				url: app.globalData.BaseURL + 'Login',
 				data: e.detail.value,
         header: { 'content-type': 'application/x-www-form-urlencoded' },
 				success: function (res) {
+          console.log(res);
 					if (res.data.success) {
 						//存储用户信息 用于用户登陆状态维护
 						app.globalData.user = res.data.data;
+            //存储token
+            app.globalData.token=res.data.token;
 						wx.navigateTo({
 							url: '/pages/index/index'
 						})
