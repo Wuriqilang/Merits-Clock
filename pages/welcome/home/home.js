@@ -52,9 +52,9 @@ Page({
 		var that = this;
 		if (userID == "" || password == "") {
 			wx.showToast({
-				title: "ID或密码不能为空",
+				title: "输入不能为空",
 				icon: 'error',
-				image: "/images/tabbar/plugin.png",
+				image: "/images/tabbar/about.png",
 				duration: 1000
 			})
 			return;
@@ -71,8 +71,21 @@ Page({
 						app.globalData.user = res.data.data;
             //存储token
             app.globalData.token=res.data.token;
-						wx.navigateTo({
-							url: '/pages/index/index'
+						wx.showToast({
+							title: '登录成功！',
+							icon: 'loading',
+							duration: 1500
+						})
+						setTimeout(() => {
+							wx.navigateTo({
+								url: '/pages/index/index'
+							})
+						}, 1000)
+					}else{
+						wx.showToast({
+							title: '输入有误！',
+							icon: 'none',
+							duration: 2000
 						})
 					}
 				},
