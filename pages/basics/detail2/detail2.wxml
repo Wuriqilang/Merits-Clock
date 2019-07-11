@@ -84,6 +84,10 @@
           <view class="title">工作内容</view>
           <input style="text-align:right;" name="martisClockContext" placeholder="输入主要工作内容" value='{{modalData.martisClockContext}}'></input>
         </view>
+				<view class="cu-form-group">
+          <view class="title">任务来源</view>
+          <input style="text-align:right;" name="martisClockSource" placeholder="输入主要工作内容" value='{{modalData.martisClockSource}}'></input>
+        </view>
         <view class="cu-form-group">
           <view class="title">考评科室</view>
           <input style="text-align:right;" name="martisClockDep" placeholder="请输入绩效任务考评科室" value='{{modalData.martisClockDep}}'></input>
