@@ -19,7 +19,11 @@
       </view>
       <view class="cu-form-group">
         <view class="title">工作内容</view>
-        <input style="text-align:right;" name="martisClockContext" placeholder="输入主要工作内容" bindblur='GetUserID'></input>
+        <input style="text-align:right;" name="martisClockContext" placeholder="输入主要工作内容"></input>
+      </view>
+			<view class="cu-form-group">
+          <view class="title">任务来源</view>
+          <input style="text-align:right;" name="martisClockSource" placeholder="输入主要工作内容" value=''></input>
       </view>
       <view class="cu-form-group">
         <view class="title">考评科室</view>
