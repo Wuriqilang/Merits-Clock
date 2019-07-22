@@ -19,7 +19,9 @@ Component({
     date2: '2020-01-01',
     martisClock:""
 	},
-
+  created() {
+    console.log(app.globalData.userInfo)
+  },
 	/**
 	 * 组件的方法列表
 	 */

@@ -53,13 +53,15 @@ Page({
         }
         break;
     }
+    console.log(this.data.tempurl);
     var that = this;
       wx.request({
         url: that.data.tempurl,
         //真实的接口地址
         data: {},
         header: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'content-type': 'application/json',
+          'Authorization': `Bearer ${app.globalData.token}`
         },
         success: function (res) {
           //console.log(res);

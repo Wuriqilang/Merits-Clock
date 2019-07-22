@@ -11,7 +11,7 @@
 
       <view class="cu-form-group solid-top">
         <view class="title">截止时间</view>
-        <picker name="martisClockDate" mode="date" value="{{date}}" start="2010-09-01" end="2022-09-01" bindchange="DateChange">
+        <picker name="martisClockDate" mode="date" value="{{date}}" start="2010-09" end="2022-09" bindchange="DateChange">
           <view class="picker">
             {{date}}
           </view>

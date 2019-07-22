@@ -18,7 +18,6 @@ Page({
 	 */
 	//methods: {
 	onLoad: function () {
-		console.log('im coming');
 		if (app.globalData.userInfo) {
 			this.setData({
 				userInfo: app.globalData.userInfo,
