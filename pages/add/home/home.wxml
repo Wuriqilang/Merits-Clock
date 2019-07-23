@@ -27,23 +27,23 @@
       </view>
       <view class="cu-form-group">
         <view class="title">考评科室</view>
-        <input style="text-align:right;" name="martisClockDep" placeholder="请输入绩效任务考评科室" value='{{userID}}'></input>
+        <input style="text-align:right;" name="martisClockDep" placeholder="请输入绩效任务考评科室" value='{{department}}'></input>
       </view>
 
       <view class="cu-form-group">
         <view class="title">责任人</view>
-        <input style="text-align:right;" name="martisClockUser" placeholder="请填入您的姓名" value='{{userID}}'></input>
+        <input style="text-align:right;" name="martisClockUser" placeholder="请填入您的姓名" value='{{userName}}'></input>
       </view>
 
       <view class="cu-form-group">
         <view class="title">具体工作任务</view>
-        <input style="text-align:right;" name="martisClockDetail" placeholder="工作详细信息" value='{{userID}}'></input>
+        <input style="text-align:right;" name="martisClockDetail" placeholder="工作详细信息" value=''></input>
       </view>
 
 
       <view class="cu-form-group">
         <view class="title">已完成情况</view>
-        <input style="text-align:right;" name="martisClockAlready" placeholder="选填" value='{{userName}}'></input>
+        <input style="text-align:right;" name="martisClockAlready" placeholder="选填" value=''></input>
       </view>
 
       <view class="cu-form-group">

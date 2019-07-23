@@ -17,10 +17,18 @@ Component({
 	data: {
     date: '2019-01-01',
     date2: '2020-01-01',
-    martisClock:""
+    martisClock:"",
+    department: "",
+    userName: ""
 	},
-  created() {
-    console.log(app.globalData.userInfo)
+  attached() {
+    var userData = app.globalData.user;
+    console.log(userData.department);
+    this.setData({
+      department:userData.department,
+      userName: userData.userName
+    })
+    console.log(this.data.userName)
   },
 	/**
 	 * 组件的方法列表

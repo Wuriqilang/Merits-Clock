@@ -37,7 +37,7 @@
     <form bindsubmit='formBindSubmit'>
       <view class="cu-form-group">
         <view class="title">名称</view>
-        <input name="userID" value='' placeholder="请输入您的名字"></input>
+        <input name="userID" value='' placeholder="请输入您的工号"></input>
       </view>
       <view class="cu-form-group">
         <view class="title">密码</view>
