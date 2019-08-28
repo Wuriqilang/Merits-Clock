@@ -38,7 +38,7 @@
       <navigator class="content" url="/pages/about/about/about" hover-class="none">
         <!-- <image src="/images/logo.png" class="png" mode="aspectFit"></image> -->
         <text class="cuIcon-notice text-red"></text>
-        <text class="text-grey ">关于资产身份证</text>
+        <text class="text-grey ">关于绩效时钟</text>
       </navigator>
     </view>
     <view class="cu-item arrow">

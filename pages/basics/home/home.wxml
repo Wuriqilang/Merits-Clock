@@ -44,7 +44,17 @@
     <navigator open-type="navigate" hover-class='none' url="/pages/basics/people/people" class="nav-li bg-olive" >
       <view class="nav-title">用户管理</view>
       <view class="nav-name">People</view>
-      <text class='cuIcon-rankfill'></text>
+      <text class='cuIcon-people'></text>
+    </navigator>
+    <navigator open-type="navigate" hover-class='none' url="/pages/basics/appoint/appoint" class="nav-li bg-olive" >
+      <view class="nav-title">发布任务</view>
+      <view class="nav-name">appoint</view>
+      <text class='cuIcon-appreciatefill'></text>
+    </navigator>
+        <navigator open-type="navigate" hover-class='none' url="/pages/basics/summary/summary" class="nav-li bg-olive" >
+      <view class="nav-title">批量添加</view>
+      <view class="nav-name">summary</view>
+      <text class='cuIcon-brandfill'></text>
     </navigator>
   </view>
   <view class='cu-tabbar-height'></view>
