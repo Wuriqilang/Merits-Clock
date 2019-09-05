@@ -11,7 +11,8 @@
     "pages/basics/detail2/detail2",
     "pages/basics/notice/notice",
     "pages/basics/alert/alert",
-    "pages/basics/people/people"
+    "pages/basics/people/people",
+    "pages/basics/appoint/appoint"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

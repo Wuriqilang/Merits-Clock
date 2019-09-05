@@ -1,12 +1,9 @@
-<!--pages/add/home/home.wxml-->
-<scroll-view scroll-y class="">
-    <view class="cu-bar bg-white">
-    <view class="action sub-title">
-      <text class="text-xl text-bold text-green">添加绩效任务</text>
-      <text class="bg-green"></text>
-      <!-- last-child选择器-->
-    </view>
-  </view>
+<!--pages/basics/detail/detail.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">发布任务</view>
+</cu-custom>
+
     <form bindsubmit='formBindSubmit'>
       <view class="cu-form-group solid-top">
         <view class="title">截止时间</view>
@@ -71,9 +68,3 @@
         <button class="cu-btn bg-blue lg" formType="submit">提交</button>
       </view>
     </form>
-  <view class="text-black bg-cyan light radius text-md margin-bottom margin-left margin-right padding-top padding-bottom">
-    <text class="cuIcon-warn text-red margin-left-lg"></text> 批量添加请登录信息管理平台
-  </view>
-
-
-</scroll-view>

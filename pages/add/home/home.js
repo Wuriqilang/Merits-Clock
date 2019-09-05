@@ -43,7 +43,8 @@ Component({
       this.setData({
         textareaAValue: e.detail.value
       })
-    }, formBindSubmit(e) {
+    }, 
+    formBindSubmit(e) {
       console.log(e.detail.value);
       var that = this;
       setTimeout(function () {
