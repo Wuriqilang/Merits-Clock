@@ -11,7 +11,9 @@ Page({
 		userInfo: {},
 		hasUserInfo: false,
 		canIUse: wx.canIUse('button.open-type.getUserInfo'),
-		userID: ''
+		userID: '',
+    picker: ["苏里格税务局"],
+    index:"0"
 	},
 	/**
 	 * 生命周期函数--监听页面加载
@@ -96,6 +98,12 @@ Page({
 
 
 	},
+  PickerChange(e) {
+    console.log(e);
+    this.setData({
+      index: e.detail.value
+    })
+  },
 	/**
 	 * 用户点击右上角分享
 	 */

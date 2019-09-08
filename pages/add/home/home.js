@@ -19,7 +19,8 @@ Component({
     date2: '2020-01-01',
     martisClock:"",
     department: "",
-    userName: ""
+    userName: "",
+    picker:["苏里格税务局"]
 	},
   attached() {
     var userData = app.globalData.user;

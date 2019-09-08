@@ -1,0 +1,10 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">批量添加</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>如何批量添加绩效任务</view>
+  <view class='text-content'>
+    <view>Hi！管理员！</view>
+    <view class='margin-top-sm'>当我们需要批量添加绩效任务时，请在电脑端登录 www.xr1228.com/login</view>
+    <view class='margin-top-sm'>输入管理员账号和密码后您就可以在后台管理所有的绩效信息了。当您有批量添加绩效任务的需求时，点击下载模版，在模版中填入信息并保存</view>
+    <view class='margin-top-sm'>接下来您点击导入Excel后所有的绩效信息就导入到数据库中了。</view>
+  </view>
+</view>

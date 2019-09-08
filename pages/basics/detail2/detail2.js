@@ -125,7 +125,6 @@ Page({
                   icon: 'success',
                   duration: 2000
                 })
-                that.refresh();
 
               } else {
                 wx.showToast({
@@ -137,6 +136,7 @@ Page({
             }
           })
         }
+        that.refresh();
       }
     })
 
@@ -202,6 +202,7 @@ Page({
   },
 
   refresh(){
+    var that=this;
     wx.request({
       url: that.data.tempurl,
       //真实的接口地址

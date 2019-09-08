@@ -29,9 +29,9 @@
 
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/wuriqilang">
+      <view class="content" bindtap="CopyLink" data-link="18647735919">
         <text class="cuIcon-github text-grey"></text>
-        <text class="text-grey">开发者信息</text>
+        <text class="text-grey">联系开发者</text>
       </view>
     </view>
     <view class="cu-item arrow">
